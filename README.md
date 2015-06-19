@@ -33,4 +33,6 @@ Opening up my WTForms models to allow for JSON representation didn't seem that e
     </form>"""
     print p.to_json()
     """{"name":"Dave","email":"dave@email.com"}"""
+
+Basically we try to clean up the model definition a bit from WTForms, mostly by describing things by their characteristics, not their HTML representation. Then we provide a set of `from_*` and `to_*` methods that do the serialisation using sensible defaults. Everything is overridable by sub-classing things. Validation is inherent to the class.
     
